@@ -8,12 +8,18 @@ int main()
      cout << "Enter a positive number: ";
      cin >> originalNumber;
 
+     //I use a work var to manipulate
      number = originalNumber;
 
      do
      {
+          //read the last digit
          digit = number % 10;
+
+          //add it to the reverse number, shifting other digits to the left
          reverseNumber = (reverseNumber * 10) + digit;
+
+          //removing the last digit from the original Number
          number = number / 10;
      } while (number != 0);
 
